@@ -1,0 +1,11 @@
+body {
+  background-image: url(../Assets/background.jpg);
+  /*background webnya*/
+}
+
+.card-img-left {
+  /* untuk ukuran gambar disebelah kiri create account*/
+  width: 45%;
+  background: scroll center url('../Assets/wp create account.jpg');
+  background-size: cover;
+}

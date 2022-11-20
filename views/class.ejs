@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <%- include('./layouts/header') %>
+
+    <title><%= title %></title>
+  </head>
+
+  <body>
+    <%- include('./layouts/navbar') %>
+
+    <nav>
+      <p>
+        <button
+          class="btn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWidthExample"
+          aria-expanded="false"
+          aria-controls="collapseWidthExample"
+          width="50px"
+        >
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+      </p>
+    </nav>
+    <div>
+      <div class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="card card-body">
+          <div class="row">
+            <div class="col col-lg-3">
+              <div class="class-info">
+                <img src="" alt="<%= title %> " style="width: 200px" />
+                <h3><b> <%= title %> Class </b></h3>
+                <div class="row">
+                  <div class="col col-sm-1">
+                    <span class="material-symbols-outlined">
+                      account_circle
+                    </span>
+                  </div>
+                  <div class="col">
+                    <h4>Janson Hendryli</h4>
+                  </div>
+                  <div>
+                    <h5>class code: <%= classCode %></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-2">
+              <div class="card card-menu">
+                <a href="/Home/index.html">
+                  <h5>Go Home</h5>
+                </a>
+              </div>
+              <div class="card card-menu">
+                <a href="/Assignment/index.html">
+                  <h5>Assignment</h5>
+                </a>
+              </div>
+              <div class="card card-menu">
+                <a href="/Grades/index.html">
+                  <h5>grades</h5>
+                </a>
+              </div>
+              <div class="card card-menu">
+                <a href="#">
+                  <h5>Files</h5>
+                </a>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-end align-items-center">
+              <div class="btn-group">
+                <button class="btn btn-sm" type="button">
+                  <span class="material-symbols-outlined"> more_vert </span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-sm"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">Add Channel</li>
+                  <li class="dropdown-item">Add Member</li>
+                  <li class="dropdown-item">Leave the team</li>
+                  <li class="dropdown-item">Edit Team</li>
+                  <li class="dropdown-divider"></li>
+                  <li class="dropdown-item">Delete the team</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feed-container">
+      <div class="card card-header">
+        <div class="row">
+          <div class="col col-sm-1">
+            <span class="material-symbols-outlined"> account_circle </span>
+          </div>
+          <div class="col col-sm-3">
+            <a href="#">
+              <h5>Janson Hendryli</h5>
+            </a>
+          </div>
+          <div class="col col-sm-3">#tanggal#</div>
+          <div class="card card-announce">
+            <div class="row">
+              <div class="col col-sm-1">
+                <span class="material-symbols-outlined"> campaign </span>
+              </div>
+              <div class="col">
+                <h4>#Announcement Title#</h4>
+              </div>
+            </div>
+            <p>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card card-header">
+        <div class="row">
+          <div class="col col-sm-1">
+            <span class="material-symbols-outlined"> account_circle </span>
+          </div>
+          <div class="col col-sm-3">
+            <a href="#">
+              <h5>#Lecturer's assistant#</h5>
+            </a>
+          </div>
+          <div class="col col-sm-3">#tanggal#</div>
+          <div class="card card-announce">
+            <div class="row">
+              <div class="col col-sm-1">
+                <span class="material-symbols-outlined"> campaign </span>
+              </div>
+              <div class="col">
+                <h4>#Announcement Title#</h4>
+              </div>
+            </div>
+            <p>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card card-header">
+        <div class="row">
+          <div class="col col-sm-1">
+            <span class="material-symbols-outlined"> Assignment </span>
+          </div>
+          <div class="col col-sm-3">#tanggal#</div>
+          <div class="card card-assignment">
+            <h2>#Assignment Title#</h2>
+            <h6>#Due date#</h6>
+            <h6>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </h6>
+            <hr />
+            <a
+              class="btn btn-assignmnent"
+              href="/Assignment/assignment_algo/index.html"
+            >
+              See Assignment
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

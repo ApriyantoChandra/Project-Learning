@@ -1,0 +1,382 @@
+body {
+  background-color: white;
+  font-size: 16;
+  background-image: url(../Assets/background.jpg);
+  background-size: cover;
+}
+
+.feather {
+  width: 25px;
+  height: 25px;
+  vertical-align: text-bottom;
+  color: rgb(0, 0, 0);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+  background-color: rgb(212, 236, 247);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(180, 8%, 69%);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(180, 8%, 40%);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: hsl(180, 8%, 40%);
+}
+
+/* Buttons Scrollbar*/
+
+::-webkit-scrollbar-button:single-button {
+  background-color: rgb(212, 236, 247);
+  display: block;
+  background-size: 10px;
+  background-repeat: no-repeat;
+}
+
+/* Up */
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 12px;
+  width: 16px;
+  background-position: center 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+/* Down */
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 12px;
+  width: 16px;
+  background-position: center 2px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+/* End of Scrollbar */
+
+/* Content For Class*/
+
+.material-symbols-outlined {
+  color: black;
+}
+
+.container-prioclass {
+  margin: 10px;
+  padding: 10px;
+}
+
+.container-prioclass div #collap .card .row {
+  margin: 45px 45px 45px 45px;
+  display: grid;
+  column-gap: 7rem;
+  row-gap: 3rem;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container-moreclass {
+  margin: 10px;
+  padding: 10px;
+  text-align: justify;
+}
+
+#collapseWidthExample .card .row {
+  margin: 45px 45px 45px 45px;
+  display: grid;
+  column-gap: 7rem;
+  row-gap: 3rem;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container-prioclass .col .card:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.container-moreclass .col .card:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.btn {
+  margin: 5px;
+  width: 12em;
+  text-align: center;
+  border: 5px;
+}
+
+.collapse {
+  margin: 0px;
+}
+
+#class {
+  width: 15em;
+  padding: 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+span {
+  color: white;
+}
+
+.container-feed {
+  border: 1px;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(212, 212, 212);
+}
+
+.btn-notif:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.container-notif {
+  margin: 20px;
+  padding: 5px;
+}
+
+/* End of Content Class */
+
+/* Circular Menu */
+
+.circular-menu {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+.circular-menu .floating-btn {
+  display: block;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  background-color: hsl(221, 17%, 49%);
+  box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, 0.26);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  line-height: 3.9;
+  cursor: pointer;
+  outline: 0;
+}
+
+.circular-menu.active .floating-btn {
+  box-shadow: inset 0 0 3px hsla(0, 0%, 0%, 0.3);
+}
+
+.circular-menu .floating-btn:active {
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.4);
+}
+
+.circular-menu .floating-btn i {
+  font-size: 1.3em;
+  transition: transform 0.2s;
+}
+
+.circular-menu.active .floating-btn i {
+  transform: rotate(-45deg);
+}
+
+.circular-menu:after {
+  display: block;
+  content: ' ';
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  background-color: hsl(221, 17%, 49%);
+  transition: all 0.3s ease;
+}
+
+.circular-menu.active:after {
+  transform: scale3d(5.5, 5.5, 1);
+  transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1);
+}
+
+.circular-menu .items-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.circular-menu .menu-item {
+  position: absolute;
+  top: 0.2em;
+  right: 0.2em;
+  z-index: -1;
+  display: block;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 1em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3;
+  background-color: hsla(0, 0%, 0%, 0.1);
+  transition: transform 0.3s ease, background 0.2s ease;
+}
+
+.circular-menu .menu-item:hover {
+  background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+.circular-menu.active .menu-item {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.circular-menu.active .menu-item:nth-child(3) {
+  transform: translate3d(0em, -7.2em, 0); /* Join Class */
+}
+
+.circular-menu.active .menu-item:nth-child(8) {
+  transform: translate3d(-7em, 1em, 0); /* Setting */
+}
+
+.circular-menu.active .menu-item:nth-child(4) {
+  transform: translate3d(-3.9em, -6em, 0); /* Assignment */
+}
+
+.circular-menu.active .menu-item:nth-child(6) {
+  transform: translate3d(-6.5em, -2.9em, 0); /* Calendar */
+}
+/* End of Circular Menu */
+
+.profile-pic {
+  color: transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.profile-pic input {
+  display: none;
+}
+
+.profile-pic img {
+  position: absolute;
+  object-fit: cover;
+  width: 130px;
+  height: 130px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+  border-radius: 100px;
+  z-index: 0;
+}
+
+.profile-pic .-label {
+  cursor: pointer;
+  height: 130px;
+  width: 130px;
+}
+
+.profile-pic:hover .-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  color: #fafafa;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 100px;
+  margin-bottom: 0;
+}
+
+.profile-pic span {
+  display: inline-flex;
+  padding: 0.2em;
+  height: 2em;
+}
+
+/***** Mobile Phones Media For Android *****/
+
+@media only screen and (max-width: 480px) {
+  #class {
+    width: 10em;
+    padding: 5px;
+    height: auto;
+  }
+
+  /* Container Priority Class */
+
+  .container-prioclass {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .container-prioclass div #collap .card .row {
+    margin: 20px 52px 20px 45px;
+    display: grid;
+    column-gap: 0;
+    row-gap: 1rem;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Container More Class */
+
+  .container-moreclass {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .container-moreclass div #collapseWidthExample .card .row {
+    margin: 20px 52px 20px 45px;
+    display: grid;
+    column-gap: 0;
+    row-gap: 1rem;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

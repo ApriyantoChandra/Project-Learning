@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <%- include ('./layouts/header') %>
+
+    <title>
+      <%= title %>
+    </title>
+</head>
+
+<body>
+  <%- include ('./layouts/navbar') %>
+
+    <div class="container" style="margin-top: -28px;">
+      <div class="input-group rounded">
+        <input type="search" class="form-control rounded" placeholder="Search Class" aria-label="Search"
+          aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+          <i data-feather="search"></i>
+        </span>
+      </div>
+    </div>
+    <br>
+    <div class="container" style="border: none;">
+      <div class="card">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-11">
+
+                <a href="../Assignment/assignment_algo/index.html" style="text-decoration: none;">
+                  <img src="../Assets/algorthm.jpg" class="gambaralgo" alt="kelas algoritma">
+
+                  <h6 class="algorithm">Algorithm 5<sup>th</sup> assignment<br><small>15214 - Jeanny Pragantha</small>
+                  </h6>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <div class="card">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-11">
+
+                <a href="../Assignment/assignment_database/pageassignment2.html" style="text-decoration: none;">
+
+                  <a href="/Assignment/assignment_database/index.html" style="text-decoration: none;">
+
+                    <img src="../Assets/database.jpg" class="gambardatabase" alt="kelas database">
+                    <h6>Database 5<sup>th</sup> assignment <br><small>37373 - Desi Arisandi</small></h6>
+                  </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <div class="card">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-11">
+
+                <a href="../Assignment/assignment_compu/index.html" style="text-decoration: none;">
+                  <img src="../Assets/computing.jpg" class="gambar-compu" alt="kelas compu">
+
+                  <h6>Computation 5<sup>th</sup> assignment<br><small>15217 - Teny Handhayani</small></h6>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <div class="card">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-11">
+
+                <a href="../Assignment/assignment_ai/index.html" style="text-decoration: none;">
+                  <img src="../Assets/Ai.jpg" class="gambar-ai" alt="kelas ai">
+
+                  <h6>Artificial Intelligence 5<sup>th</sup> assignment<br><small>234234 - Janson
+                      Hendryli</small></h6>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="modal-title" id="staticBackdropLabel"> return to main menu to use this</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <!-- Script Jquery -->
+    <script src="https://api.jquery.com/"></script>
+    <!-- Script External -->
+    <script src="<%= script %> "></script>
+    <!-- Script Feather Icon -->
+    <script>
+      feather.replace()
+    </script>
+</body>
+
+</html>
