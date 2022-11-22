@@ -268,21 +268,42 @@ span {
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.circular-menu.active .menu-item:nth-child(3) {
-  transform: translate3d(0em, -7.2em, 0); /* Join Class */
+/* .circular-menu.active .menu-item:nth-child(3) {
+  transform: translate3d(0em, -7.2em, 0); /* Join Class 
 }
 
 .circular-menu.active .menu-item:nth-child(8) {
-  transform: translate3d(-7em, 1em, 0); /* Setting */
+  transform: translate3d(-7em, 1em, 0); /* Setting 
 }
 
 .circular-menu.active .menu-item:nth-child(4) {
-  transform: translate3d(-3.9em, -6em, 0); /* Assignment */
+  transform: translate3d(-3.9em, -6em, 0); /* Assignment 
 }
 
 .circular-menu.active .menu-item:nth-child(6) {
-  transform: translate3d(-6.5em, -2.9em, 0); /* Calendar */
+  transform: translate3d(-6.5em, -2.9em, 0); /* Calendar 
+} */
+
+.circular-menu.active .menu-item:nth-child(1) {
+  transform: translate3d(1em, -7em, 0);
 }
+
+.circular-menu.active .menu-item:nth-child(3) {
+  transform: translate3d(-2.3em, -6.8em, 0);
+}
+
+.circular-menu.active .menu-item:nth-child(6) {
+  transform: translate3d(-5.1em, -5.1em, 0);
+}
+
+.circular-menu.active .menu-item:nth-child(4) {
+  transform: translate3d(-6.8em, -2.3em, 0);
+}
+
+.circular-menu.active .menu-item:nth-child(8) {
+  transform: translate3d(-7em, 1em, 0);
+}
+
 /* End of Circular Menu */
 
 .profile-pic {

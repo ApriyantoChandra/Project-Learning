@@ -30,8 +30,11 @@
           </button>
         </p>
 
-        <% if (msg.length !==0) { %>
+        <% if (msg.length !== 0 || typeof errors !== 'undefined') { %>
         <div class="alert alert-danger pl-5" role="alert"><%= msg %></div>
+        <div class="alert alert-danger pl-5" role="alert">
+          <%= errors.msg %>
+        </div>
         <% } %>
 
         <div class="collapse.show" id="collap">
@@ -222,9 +225,7 @@
               >
             </td>
             <td>
-              <a
-                href="../Assignment/index.html"
-                class="btn btn-notif btn-primary"
+              <a href="/assignment" class="btn btn-notif btn-primary"
                 >See Assignment</a
               >
             </td>
@@ -278,7 +279,7 @@
     </form>
 
     <!--create class-->
-    <form action="/home" method="post" enctype="multipart/form-data">
+    <form action="/home" method="post">
       <div
         class="modal fade"
         id="exampleModalCenter"

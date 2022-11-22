@@ -8,7 +8,9 @@
     "deploy": "gh-pages -d build",
     "start": "node ./bin/www",
     "checkEJS": "ejslint views/home.ejs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "testDB": "nodemon ./utils/db",
+    "dev": "node index"
   },
   "keywords": [
     "Learning",

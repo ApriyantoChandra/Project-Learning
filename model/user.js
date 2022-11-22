@@ -5,18 +5,14 @@ const User = mongoose.model('User', {
     type: String,
     required: true,
   },
-  emailDesc: {
+
+  email: {
     type: String,
     required: true,
   },
+  
   password: {
     type: String,
     required: true,
-  },
-  confPassword: {
-    type: String,
-    required: true,
-  },
+  }
 })
-
-module.exports = User

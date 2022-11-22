@@ -5,7 +5,7 @@ const expressLayouts = require('express-ejs-layouts')
 const fs = require('fs')
 
 const methodOverride = require('method-override')
-const multer = require('multer')
+// const multer = require('multer')
 
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
@@ -20,7 +20,7 @@ require('./utils/db')
 
 // Masukin Collection nya disini
 const Class = require('./model/class')
-const { get } = require('mongoose')
+// const User = require('./model/user')
 
 // Set Multer
 // const fileStorage = multer.diskStorage({
@@ -77,6 +77,10 @@ app.get('/', (req, res) => {
   })
 })
 
+// POST Login Index
+app.post('/', (req, res) => {})
+
+// GET CreateAccount Page
 app.get('/createAccount', (req, res) => {
   res.render('createacc', {
     title: 'W-Learning',
@@ -85,8 +89,37 @@ app.get('/createAccount', (req, res) => {
   })
 })
 
-app.post('/createAccount', (req, res) => {})
+// POST CreateAccount Page
+app.post(
+  '/createAccount',
+  [
+    body('email').custom(async (value) => {
+      const duplikat = await User.findOne({ email: value })
+      if (duplikat) {
+        throw new Error('Username Exist')
+      }
+      return true
+    }),
+  ],
+  check('email').isEmail(),
+  (req, res) => {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      res.render('createacc', {
+        title: 'Create Account',
+        layout: 'createacc',
+        style: 'css/styleCreateAcc.css',
+        errors: errors.array(),
+      })
+    } else {
+      User.insertMany(req.body, (error, result) => {
+        req.redirect('/home')
+      })
+    }
+  }
+)
 
+// GET Home Page
 app.get('/home', async (req, res) => {
   const classes = await Class.find()
 
@@ -100,9 +133,11 @@ app.get('/home', async (req, res) => {
   })
 })
 
+// POST Home Page
 app.post(
   '/home',
   [
+    body('classCode').isLength({ min: 4 }),
     body('classCode').custom(async (value) => {
       const duplicateClass = await Class.findOne({ classCode: value })
       if (duplicateClass) {
@@ -111,7 +146,6 @@ app.post(
       return true
     }),
     // Validasi code
-    check('classCode', 'Code harus dengan angka').isInt(),
   ],
   (req, res) => {
     const errors = validationResult(req)
@@ -134,6 +168,37 @@ app.post(
   }
 )
 
+// GET Assignment Page
+app.get('/assignment', (req, res) => {
+  res.render('assignment', {
+    title: 'Assignment',
+    layout: 'assignment',
+    style: 'css/styleAssignment.css',
+    script: 'js/scriptAssignment.js',
+  })
+})
+
+// GET Calendar Page
+app.get('/calendar', (req, res) => {
+  res.render('calendar', {
+    title: 'Calendar',
+    layout: 'calendar',
+    style: 'css/styleCalendar.css',
+    script: 'js/scriptCalendar.js',
+  })
+})
+
+// GET Setting Page
+app.get('/settings', (req, res) => {
+  res.render('setting', {
+    title: 'Settings',
+    layout: 'setting',
+    style: 'css/styleSetting.css',
+    script: 'js/scriptSetting.js',
+  })
+})
+
+// GET ClassName Page
 app.get('/:className', async (req, res) => {
   const classes = await Class.findOne({ className: req.params.className })
 
@@ -143,15 +208,6 @@ app.get('/:className', async (req, res) => {
     classCode: req.params.classCode,
     layout: 'class',
     classes,
-  })
-})
-
-app.get('/assignment', (req, res) => {
-  res.render('assignment', {
-    title: 'Assignment',
-    layout: 'assignment',
-    style: 'css/styleAssignment',
-    script: 'js/scriptAssignment',
   })
 })
 
