@@ -211,6 +211,6 @@ app.get('/:className', async (req, res) => {
   })
 })
 
-app.listen(port, () => {
-  console.log(`Listening on port ${process.env.PORT || 9000}`)
+app.listen(process.env.PORT || 9000, () => {
+  console.log("It's Worked")
 })

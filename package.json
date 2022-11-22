@@ -6,11 +6,11 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "node ./bin/www",
+    "start": "node index.js",
     "checkEJS": "ejslint views/home.ejs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "testDB": "nodemon ./utils/db",
-    "dev": "node index"
+    "dev": "node index.js"
   },
   "keywords": [
     "Learning",

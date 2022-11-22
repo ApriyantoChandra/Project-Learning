@@ -33,7 +33,7 @@
         <% if (msg.length !== 0 || typeof errors !== 'undefined') { %>
         <div class="alert alert-danger pl-5" role="alert"><%= msg %></div>
         <div class="alert alert-danger pl-5" role="alert">
-          <%= errors.msg %>
+          <% errors.forEach(error => { %> <%= error.msg %> <% }) %>
         </div>
         <% } %>
 
